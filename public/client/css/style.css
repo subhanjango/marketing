@@ -1,0 +1,855 @@
+/*------------------------------------------------------------------
+
+Store - Responsive Product Landing Page Template 
+Version :	1.0 
+Author  : The Template Lab 
+URI		: http://themeforest.net/user/thetemplatelaby  
+=====================================================================
+
+
+[Table of contents]
+
+	1. Global CSS
+		1.1. General CSS
+		1.2. Typography
+	2. Master Color Setting
+		2.1. Background Color Setting
+		2.2 Text color Setting
+		2.3 Border color Setting
+	3. Common CSS
+	4. Header Section
+		4.1 Navbar Section
+		4.2 Banner Section
+	5. About Section
+	6. Features Section
+	7. About-more Section
+	8. Video Section
+	9. Choose Section
+	10. Count Section
+	11. Pricing Section
+	12. Discount Section
+	13. Testimonial Section
+	14. Subscribe Section
+	15. Faq Section
+	16. Contact Section
+	17. Footer Section
+
+
+
+/* ========================
+    1. Global CSS
+======================== */
+
+/* -----------------------
+    1.1. General CSS
+----------------------- */
+
+body {
+    color: #111;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding: 90px 0px;
+}
+
+@media (max-width: 575px) {
+    section {
+        padding: 60px 0px;
+    }
+}
+
+
+/* -----------------------
+    1.2. Typography 
+----------------------- */
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.section-heading {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+@media (max-width: 991px) {
+    .section-heading {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-heading {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+}
+
+/* ================================
+    2. Master Color Setting
+================================= */
+
+/*----------------------------------
+    2.1. Background Color Setting
+----------------------------------*/
+
+.jumbotron,
+.button-style,
+.video a {
+    background-color: #254cea;
+}
+
+.button-style:hover {
+    background-color: #1C44E4;
+}
+
+
+/*----------------------------------
+    2.2 Text color Setting
+----------------------------------*/
+
+.icon,
+.video a:hover i{
+    color: #254cea;
+}
+
+
+.social-icons i {
+    color: #fff;
+}
+
+/*----------------------------------
+    	2.3 Border color Setting
+----------------------------------*/
+
+.border-color {
+    border-color: #254cea;
+}
+
+/* ==================================
+   		3. Common CSS
+================================== */
+
+.button-style {
+    padding: 11px 40px;
+    outline: none!important;
+    border: none;
+    font-size: 16px;
+    color: #F6F6F6;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 0;
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+
+}
+
+.button-style:focus {
+    box-shadow: none;
+}
+
+.parallax {
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.7;
+}
+
+.bg-grey {
+    background: #eee;
+}
+
+h2.section-heading {
+    margin-top: 0!important;
+    color: #000;
+    margin-bottom: 28px;
+}
+
+.section-paragraph {
+    margin-bottom: 35px;
+    color: #111;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+
+
+@media (max-width: 575px) {
+    .xs-mb-1 {
+        margin-bottom: 0.25rem;
+    }
+    .xs-mb-2 {
+        margin-bottom: 0.5rem;
+    }
+    .xs-mb-3 {
+        margin-bottom: 1rem!important;
+    }
+    .xs-mb-4 {
+        margin-bottom: 1.5rem!important;
+    }
+    .xs-mb-5 {
+        margin-bottom: 3rem;
+    }
+    .xs-mb-2r {
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .sm-mb-1 {
+        margin-bottom: .25rem;
+    }
+    .sm-mb-2 {
+        margin-bottom: 0.5rem;
+    }
+    .sm-mb-3 {
+        margin-bottom: 1rem;
+    }
+    .sm-mb-4 {
+        margin-bottom: 1.5rem!important;
+    }
+    .sm-mb-5 {
+        margin-bottom: 3rem!important;
+    }
+    .sm-mb-2r {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .md-mb-0 {
+        margin-bottom: .0!important;
+    }
+    .md-mb-1 {
+        margin-bottom: .25rem;
+    }
+    .md-mb-2 {
+        margin-bottom: 0.5rem;
+    }
+    .md-mb-3 {
+        margin-bottom: 1rem;
+    }
+    .md-mb-4 {
+        margin-bottom: 1.5rem;
+    }
+    .md-mb-5 {
+        margin-bottom: 3rem!important;
+    }
+    .md-mb-2r {
+        margin-bottom: 2rem!important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .lg-mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+/* =========================== 
+  		4. Header Section
+============================== */
+
+/* ------------------------- 
+  	 4.1 Navbar Section
+------------------------- */
+
+.navbar {
+    background: none !important;
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+.nav-link {
+    color: #fff !important;
+    padding: 0px 15px !important;
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+}
+
+.nav-bg {
+    background: #fff !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+}
+
+.nav-bg a {
+    color: #111 !important;
+}
+
+.logo-color {
+    display: none;
+}
+
+.nav-bg .logo-color {
+    display: block;
+}
+
+.nav-bg .logo-white {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .navbar-brand img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-expand-lg {
+        background: #fff !important;
+    }
+    .navbar {
+        margin-top: 0 !important;
+    }
+    .nav-link {
+        color: #666 !important;
+    }
+    .nav-item {
+        border-bottom: solid 1px #ccc;
+        padding: 10px 0;
+    }
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    .logo-color {
+        display: block;
+    }
+    .logo-white {
+        display: none;
+    }
+}
+
+
+/* -------------------------
+  	 4.2 Banner Section 
+------------------------- */
+
+.jumbotron {
+    padding: 120px 0px;
+    color: #fff;
+    margin: 0;
+}
+
+.front_page{
+    background-color: #cccccc; /* Used if the image is unavailable */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+        height: 100%;
+         width: 100%;
+}
+
+
+.jumbotron .button-style {
+    background-color: #fff;
+    border: solid 1px #fff;
+    color: #333;
+}
+
+.jumbotron .button-style:hover {
+    background-color: transparent;
+    color: #f6f6f6;
+}
+
+.jumbotron .border-button {
+    padding: 11px 40px;
+    background-color: transparent;
+    outline: none!important;
+    font-size: 16px;
+    color: #f6f6f6;
+    border: solid 1px #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 0;
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.jumbotron .border-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+@media (max-width: 1199px) {
+    .jumbotron h1 {
+        font-size: 53px;
+    }
+    .jumbotron .lead {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 991px) {
+    .jumbotron h1 {
+        font-size: 39px;
+    }
+}
+
+@media (max-width: 767px) {
+    .jumbotron img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    .jumbotron img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 472px) {
+    .jumbotron h1 {
+        font-size: 35px;
+    }
+    .jumbotron .lead {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 426px) {
+    .jumbotron h1 {
+        font-size: 30px;
+    }
+    .jumbotron .lead {
+        font-size: 16px;
+    }
+    .jumbotron .button-style,
+    .jumbotron .border-button {
+        padding: 9px 25px;
+        font-size: 15px;
+    }
+    .jumbotron img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 370px) {
+    .jumbotron h1 {
+        font-size: 27px;
+    }
+    .jumbotron .lead {
+        font-size: 15px;
+    }
+    .jumbotron .button-style,
+    .jumbotron .border-button {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 335px) {
+    .jumbotron h1 {
+        font-size: 25px;
+    }
+}
+
+/* =========================
+   	 5. About Section
+========================= */
+
+.about img {
+    max-width: 245px;
+    margin: 0 auto;
+}
+
+.about .button-style {
+    padding: 9px 30px;
+}
+
+
+@media (max-width: 991px) {
+    .about img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    .about img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+    .about img {
+        max-width: 80%;
+    }
+}
+
+/* =========================
+   	 6. Features Section
+============================ */
+
+/* ===============================
+   	 7. About-more Section
+================================== */
+
+.about-more .about-text h3{
+	margin-top: 30px;
+}
+.about-more .about-more-img a {
+    outline: none;
+}
+
+.about-more .about-more-img img {
+    max-width: 60%;
+}
+
+@media (max-width: 991px) {
+    .about-more .about-more-img img {
+        max-width: 80%;
+    }
+}
+
+/* =========================
+   	 8. Video Section
+========================= */
+
+.video a {
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    line-height: 72px;
+    padding-left: 5px;
+    color: #fff;
+    outline: none;
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+
+}
+
+.video a:hover {
+    background-color: #fff;
+}
+
+/* =========================
+   	 9. Choose Section
+============================ */
+
+.choose ul li {
+    line-height: 1.9;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.choose-icon{
+	margin-right: 15px;
+}
+
+.choose img {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width:575px) {
+    .choose img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width:400px) {
+    .choose img {
+        max-width: 80%;
+    }
+}
+
+/*====================================
+		10. Count Section
+====================================*/
+
+.count {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.count h3 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.count p {
+    font-weight: 500;
+}
+
+@media (max-width:767.90px) {
+    .count .icon {
+        margin-bottom: 0!important;
+    }
+    .mb20 {
+        margin-bottom: 2rem;
+    }
+    .mb20:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* =========================
+   	 11. Pricing Section
+========================= */
+
+.pricing-body {
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.pricing-body:hover {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+}
+
+.pricing-body h3 {
+    font-size: 20px;
+    font-weight: 600;
+	margin: 0!important;
+}
+
+.pricing-body p {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 5px auto 15px;
+}
+
+.pricing-body .button-style {
+    padding: 7px 23px;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 767px) {
+    .pricing-body img {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .pricing-body img {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .pricing-body img {
+        max-width: 80%;
+    }
+}
+
+/* =========================
+   	 12. Discount Section
+========================= */
+
+.discount {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* =============================
+   	 13. Testimonial Section
+================================= */
+
+.testimonial-body {
+    border: solid 1px #aaa;
+    padding: 20px;
+}
+
+.testimonial-body i{
+	margin-bottom: 10px;
+}
+
+.testimonial-body h3 {
+    font-size: 19px;
+	margin-top: 6px!important;
+}
+
+.testimonial-footer img {
+    height: 70px;
+    width: 70px;
+	margin-top: 10px;
+}
+
+.owl-carousel .owl-item img {
+    width: auto;
+    display: inline;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    font-size: 30px !important;
+    padding: 0 6px !important;
+    line-height: 1;
+    outline: none;
+    margin: 10px auto 0;
+}
+
+/* ==============================
+   	 14. Subscribe Section
+================================ */
+
+.subscribe {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.subscribe input {
+    border-radius: 0;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+}
+
+.subscribe input:focus {
+    box-shadow: none;
+}
+
+.subscribe .button-style {
+    padding: 15px 0;
+}
+
+/* ====================================
+   	 15. Faq Section
+======================================= */
+
+.faq .btn-link {
+    text-decoration: none;
+	color: #333;
+}
+
+.faq-img img {
+    max-width: 280px;
+}
+
+@media screen and (max-width: 400px) {
+    .faq-img img {
+        max-width: 80%;
+    }
+}
+
+/* =========================
+   	 16. Contact Section
+============================ */
+
+.contact {}
+
+.contact .form-group input {
+    padding: 14px 15px;
+    margin-bottom: 8px;
+    border-radius: 0;
+    font-size: 15px;
+    color: #222;
+}
+
+.contact .form-group textarea {
+    margin-bottom: 8px;
+    border-radius: 0;
+    font-size: 15px;
+    padding: 14px 15px;
+}
+
+.contact .form-group .form-control::placeholder {
+    color: #222!important;
+}
+
+.contact .form-group .button-style {
+    padding: 14px 0;
+    font-size: 16px;
+}
+
+.contact .form-inline input:focus {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.contact .form-inline textarea:focus {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.contact-social-icon i {
+    font-size: 22px;
+}
+
+.contact-social-icon h5 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199.98px) {
+    .contact-social-icon i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .contact .form-inline input {
+        width: 100%!important;
+        margin-right: 0!important;
+    }
+    .contact .form-inline textarea {
+        width: 100%;
+    }
+    .contact .form-inline .button-style {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   	 17. Footer Section
+============================ */
+
+#page-footer {
+    background-color: #333;
+    color: #ddd;
+    padding: 45px 0 30px;
+    padding: 45px 0 30px;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+}
